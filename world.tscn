@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://dik8x66stowpt"]
+
+[ext_resource type="Script" path="res://world.gd" id="1_0q62l"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pppyg"]
+size = Vector2(2400, 100)
+
+[node name="World" type="Node2D"]
+script = ExtResource("1_0q62l")
+
+[node name="Floor" type="StaticBody2D" parent="."]
+position = Vector2(1155, 1172)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
+shape = SubResource("RectangleShape2D_pppyg")
+
+[node name="ColorRect" type="ColorRect" parent="Floor"]
+offset_left = -1213.0
+offset_top = -50.0
+offset_right = 1202.0
+offset_bottom = 157.0
+color = Color(0.588235, 0.309804, 0.0941176, 1)
